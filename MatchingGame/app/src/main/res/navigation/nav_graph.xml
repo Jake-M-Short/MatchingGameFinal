@@ -1,0 +1,69 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/startFragment">
+    <!-- Navigation menu controlling navigation between views -->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.matchinggame.StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.matchinggame.MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_gameFragment"
+            app:destination="@id/gameFragment">
+            <argument
+                android:name="difficulty"
+                app:argType="integer"
+                android:defaultValue="6" />
+        </action>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.matchinggame.GameFragment"
+        tools:layout="@layout/fragment_game">
+        <argument
+            android:name="difficulty"
+            app:argType="integer"
+            android:defaultValue="6" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment">
+            <argument
+                android:name="matches"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_gameFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.matchinggame.StatsFragment"
+        tools:layout="@layout/fragment_stats">
+        <action
+            android:id="@+id/action_statsFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.matchinggame.GameOverFragment"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+</navigation>
