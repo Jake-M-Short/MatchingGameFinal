@@ -4,7 +4,7 @@
 
  This app is a matching game that has multiple difficulties as well as keeps the highest score of the user at a certain difficulty.
 
- ## Features
+ # Features
 
  Contains multiple difficulties including Easy(6 Cards), Medium(10 Cards), and Hard(12 Cards).
 
@@ -18,7 +18,7 @@
 
  Card art that also matches the theme for christmas.
 
- ## Screenshots of the app here:
+ # Screenshots of the app here:
 ![startscreen](https://github.com/user-attachments/assets/b0ce433e-1edc-426d-924f-d9ca6a2ea09d)
 ![MainMenu](https://github.com/user-attachments/assets/0b4d42ba-2418-49a2-8efc-8912fe8ab75d)
 ![viewstatistics](https://github.com/user-attachments/assets/2b2ce937-81b1-46e6-b8d4-d0d770a50ccb)
